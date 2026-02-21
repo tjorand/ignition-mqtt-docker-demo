@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  mqtt-client:
+    build: .
+    container_name: mqtt-client
+    restart: unless-stopped
+    networks:
+      - mqtt-network
+
+networks:
+  mqtt-network:
+    driver: bridgehwo
